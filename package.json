@@ -1,0 +1,13 @@
+{
+  "name": "sorting",
+  "version": "1.0.0",
+  "description": "sorting algoritm collection",
+  "main": "/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "build": "cp src/index.js dist/index.mjs && cp src/index.js dist/index.cjs && sed -i 's/export default/module.exports =/g' dist/index.cjs"
+  },
+  "author": "candrajulius",
+  "license": "ISC",
+  "type": "module"
+}
