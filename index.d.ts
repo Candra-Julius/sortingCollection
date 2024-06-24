@@ -1,6 +1,20 @@
 export interface IOption {
+    /**
+     * order - asc (Default) || desc
+     * 
+     * use this option to set it either asc or desc
+     *  */ 
     order?: String,
+    /**
+     * type - bubble || selection || insertion || quick || count
+     * 
+     * for now only these algorithm available, it will update soon
+     *  */ 
     type: String,
+    /**
+     * persist - Set true if you want to modified the original value
+     * 
+     *  */ 
     persist: Boolean
 }  
 

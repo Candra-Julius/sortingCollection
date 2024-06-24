@@ -2,7 +2,7 @@
     "compilerOptions": {
       "lib": ["es2020","es2022"],
       "target": "es2022",
-      "module": "ES2022",
+      "module": "CommonJS",
       "moduleResolution": "node",
       "baseUrl": "./",
       "paths": {
