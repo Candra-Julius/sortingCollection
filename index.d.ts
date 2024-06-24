@@ -1,8 +1,10 @@
-'use-strict'
-import map from './service/map.js'
+export interface IOption {
+    order?: String,
+    type: String,
+    persist: Boolean
+}  
 
 /**
- * 
  * @param {array} arr Array that will be sorted
  * @param {function} comparison A function that defines the sort order. Should return a number.
  * @param {object} option Option that contain order, type, and persist
@@ -20,15 +22,4 @@ import map from './service/map.js'
  * 
  * persist - Set true if you want to modified the original value
  */
-function sortingAlgorithm(arr, comparison = ((x)=>x), {order = 'asc', persist = false, type}){
-    if(typeof comparison !== 'function') throw 'function comparison must be a function';
-    if(!map[type]) {throw `${type} is unknown type. please use either one of this 
-    bubble || selection || insertion || quick || count`;}
-
-    const array = persist? arr : [...arr];
-    const sorting = new map[type](array,comparison)
-    return sorting.sort(order)
-}
-
-export default sortingAlgorithm;  // ESM export
-module.exports = sortingAlgorithm;  // CJS export
+export function sortingAlgorithm(array:Array<any>, comparison:Function, option:IOption):Array<any>;

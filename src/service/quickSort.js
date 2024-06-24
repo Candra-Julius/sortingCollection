@@ -1,5 +1,5 @@
 'use-strict'
-import Prototype from "../Prototype/sortingPrototype.mjs";
+import Prototype from "../Prototype/sortingPrototype.js";
 
 export default class QuickSort extends Prototype {
     constructor(array, comparison) {

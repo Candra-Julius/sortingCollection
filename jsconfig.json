@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "lib": ["es2020","es2022"],
+      "target": "es2022",
+      "module": "ES2022",
+      "moduleResolution": "node",
+      "baseUrl": "./",
+      "paths": {
+        "*": ["node_modules/*", "*.js","*.cjs","*.mjs"]
+      }
+    },
+    "include": ["src/**/*.js", "src/*.js", "dist/**/*.cjs", "dist/*.cjs","dist/**/*.mjs", "dist/*.mjs", "src/service/map.js"]
+  }

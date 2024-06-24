@@ -1,5 +1,5 @@
 'use-strict'
-import Prototype from "../Prototype/sortingPrototype.mjs";
+import Prototype from "../Prototype/sortingPrototype.js"
 
 export default class CountingSort extends Prototype {
     constructor(array, constructor) {
