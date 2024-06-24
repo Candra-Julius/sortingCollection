@@ -1,7 +1,7 @@
 'use-strict'
-import Prototype from "../Prototype/sortingPrototype.js";
+const Prototype = require("../Prototype/sortingPrototype.js")
 
-export default class InsertionSort extends Prototype{
+module.exports =  class InsertionSort extends Prototype{
     constructor(array, comparison){
         super(comparison)
         this.array = array

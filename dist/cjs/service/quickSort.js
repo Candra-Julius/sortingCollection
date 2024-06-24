@@ -1,13 +1,8 @@
 "use strict";
 'use-strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _sortingPrototype = _interopRequireDefault(require("../Prototype/sortingPrototype.js"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-class QuickSort extends _sortingPrototype.default {
+const Prototype = require("../Prototype/sortingPrototype.js");
+module.exports = class QuickSort extends Prototype {
   constructor(array, comparison) {
     super(comparison);
     this.array = array;
@@ -28,6 +23,5 @@ class QuickSort extends _sortingPrototype.default {
     }
     if (leftArray.length > 0 && rightArray.length > 0) return [...this.partition(leftArray), pivot, ...this.partition(rightArray)];else if (leftArray.length > 0) return [...this.partition(leftArray), pivot];else return [pivot, ...this.partition(rightArray)];
   }
-}
-exports.default = QuickSort;
+};
 //# sourceMappingURL=quickSort.js.map

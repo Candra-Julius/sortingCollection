@@ -1,18 +1,14 @@
 "use strict";
 'use-strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports["default"] = void 0;
-var _map = _interopRequireDefault(require("./service/map.js"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var map = require('./service/map.js');
+
 /**
  * 
  * @param {array} arr Array that will be sorted
@@ -43,13 +39,12 @@ function sortingAlgorithm(arr) {
     persist = _ref$persist === void 0 ? false : _ref$persist,
     type = _ref.type;
   if (typeof comparison !== 'function') throw 'function comparison must be a function';
-  if (!_map["default"][type]) {
+  if (!map[type]) {
     throw "".concat(type, " is unknown type. please use either one of this \n    bubble || selection || insertion || quick || count");
   }
   var array = persist ? arr : _toConsumableArray(arr);
-  var sorting = new _map["default"][type](array, comparison);
+  var sorting = new map[type](array, comparison);
   return sorting.sort(order);
 }
-var _default = exports["default"] = sortingAlgorithm; // ESM export
-module.exports = sortingAlgorithm; // CJS export
+module.exports = sortingAlgorithm;
 //# sourceMappingURL=index.js.map

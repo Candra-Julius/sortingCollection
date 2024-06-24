@@ -1,7 +1,7 @@
 'use-strict'
-import Prototype from "../Prototype/sortingPrototype.js"
+const Prototype = require("../Prototype/sortingPrototype.js")
 
-export default class CountingSort extends Prototype {
+module.exports =  class CountingSort extends Prototype {
     constructor(array, constructor) {
         super(constructor)
         this.array = array;

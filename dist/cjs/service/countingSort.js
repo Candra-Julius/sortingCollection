@@ -1,13 +1,8 @@
 "use strict";
 'use-strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _sortingPrototype = _interopRequireDefault(require("../Prototype/sortingPrototype.js"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-class CountingSort extends _sortingPrototype.default {
+const Prototype = require("../Prototype/sortingPrototype.js");
+module.exports = class CountingSort extends Prototype {
   constructor(array, constructor) {
     super(constructor);
     this.array = array;
@@ -32,6 +27,5 @@ class CountingSort extends _sortingPrototype.default {
     this.array = ressArr;
     return this.array;
   }
-}
-exports.default = CountingSort;
+};
 //# sourceMappingURL=countingSort.js.map

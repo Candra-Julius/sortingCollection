@@ -1,13 +1,8 @@
 "use strict";
 'use-strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _sortingPrototype = _interopRequireDefault(require("../Prototype/sortingPrototype.js"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-class BubbleSort extends _sortingPrototype.default {
+const Prototype = require("../Prototype/sortingPrototype.js");
+module.exports = class BubbleSort extends Prototype {
   constructor(array, comparison) {
     super(comparison);
     this.array = array;
@@ -21,6 +16,5 @@ class BubbleSort extends _sortingPrototype.default {
     }
     return arr;
   }
-}
-exports.default = BubbleSort;
+};
 //# sourceMappingURL=bubbleSort.js.map

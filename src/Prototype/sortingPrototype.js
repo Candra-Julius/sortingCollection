@@ -1,5 +1,5 @@
 'use-strict'
-export default class Prototype {
+module.exports =  class Prototype {
     constructor(comparison){
         this.comparison = comparison
     }

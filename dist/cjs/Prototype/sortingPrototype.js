@@ -1,11 +1,7 @@
 "use strict";
 'use-strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-class Prototype {
+module.exports = class Prototype {
   constructor(comparison) {
     this.comparison = comparison;
   }
@@ -15,6 +11,5 @@ class Prototype {
     if (!int) throw 'Comparison function have to return integer';
     return value;
   }
-}
-exports.default = Prototype;
+};
 //# sourceMappingURL=sortingPrototype.js.map

@@ -1,8 +1,8 @@
 'use-strict'
-import Prototype from "../Prototype/sortingPrototype.js";
+const Prototype = require("../Prototype/sortingPrototype.js");
 
 
-export default class BubbleSort extends Prototype{
+module.exports =  class BubbleSort extends Prototype{
     constructor(array, comparison) {
         super(comparison)
         this.array = array;

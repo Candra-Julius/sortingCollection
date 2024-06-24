@@ -1,12 +1,12 @@
 'use-strict'
-import BubbleSort from "./bubbleSort.js";
-import CountingSort from "./countingSort.js";
-import InsertionSort from "./insertionSort.js";
-import QuickSort from "./quickSort.js";
-import SelectionSort from "./selectionSort.js";
+const BubbleSort =  require("./bubbleSort.js");
+const CountingSort =  require("./countingSort.js");
+const InsertionSort =  require("./insertionSort.js");
+const QuickSort =  require("./quickSort.js");
+const SelectionSort =  require("./selectionSort.js");
 
 
-export default {
+module.exports =  {
     bubble: BubbleSort,
     selection: SelectionSort,
     insertion: InsertionSort,

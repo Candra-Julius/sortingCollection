@@ -1,5 +1,5 @@
 'use-strict'
-import map from './service/map.js'
+const map = require('./service/map.js')
 
 /**
  * 
@@ -30,5 +30,4 @@ function sortingAlgorithm(arr, comparison = ((x)=>x), {order = 'asc', persist = 
     return sorting.sort(order)
 }
 
-export default sortingAlgorithm;  // ESM export
-module.exports = sortingAlgorithm;  // CJS export
+module.exports =  sortingAlgorithm; 

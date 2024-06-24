@@ -38,6 +38,7 @@
       ],
     ],
     plugins: ['@babel/plugin-transform-modules-commonjs'],
+    ignore: ['node_modules', 'playground.js'],
     env: {
       esm: {
         presets: [
